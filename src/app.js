@@ -6,7 +6,7 @@ dotenv.config();
 const app = Fastify({ logger: true });
 
 app.get("/", async () => {
-  return { status: "ok" };
+  return { msg:"Welcome to CI/CD Demo" };
 });
 
 app.get("/sum/:a/:b", async (request) => {

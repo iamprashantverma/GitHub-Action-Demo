@@ -14,6 +14,12 @@ app.get("/sum/:a/:b", async (request) => {
   return { sum: Number(a) + Number(b) };
 });
 
+app.get("/subtract/:a/:b",async(request)=>{
+  const {a,b} = request.params;
+  return  {subtract:Number(a)-Number(b)};
+})
+
+
 function start() {
   
   const PORT = process.env.PORT || 3000;

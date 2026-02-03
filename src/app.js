@@ -16,9 +16,8 @@ app.get("/sum/:a/:b", async (request) => {
 
 app.get("/subtract/:a/:b",async(request)=>{
   const {a,b} = request.params;
-  return  {subtract:Number(a)-Number(b) - 1};
+  return  {subtract:Number(a)-Number(b)};
 })
-
 
 function start() {
   

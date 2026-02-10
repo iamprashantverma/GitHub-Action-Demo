@@ -1,6 +1,5 @@
 const Fastify = require("fastify");
 const dotenv = require("dotenv");
-const MathService = require("./services/math.service");
 
 dotenv.config();
 
@@ -10,21 +9,7 @@ app.get("/", async () => {
   return { msg: "Welcome to CI/CD Demo" };
 });
 
-app.get("/sum/:a/:b", async (request) => {
-  const { a, b } = request.params;
-
-  return {
-    sum: MathService.sum(a, b)
-  };
-});
-
-app.get("/subtract/:a/:b", async (request) => {
-  const { a, b } = request.params;
-
-  return {
-    subtract: MathService.subtract(a, b)
-  };
-});
+app.register(require("./routes/math.routes"));
 
 function start() {
   const PORT = process.env.PORT || 3000;

@@ -15,14 +15,14 @@ describe("Math APIs", () => {
     const res = await request(app.server).get("/sum/4/6");
 
     expect(res.statusCode).toBe(200);
-    expect(res.body.sum).toBe(10);
+    expect(res.body.result).toBe(10);
   });
 
   test("GET /subtract/:a/:b returns correct subtraction", async () => {
     const res = await request(app.server).get("/subtract/10/4");
 
     expect(res.statusCode).toBe(200);
-    expect(res.body.subtract).toBe(6);
+    expect(res.body.result).toBe(6);
   });
 
 });

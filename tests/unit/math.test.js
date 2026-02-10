@@ -10,7 +10,7 @@ describe("Math Service", () => {
 
   describe("sum", () => {
     test("adds two numbers", () => {
-      expect(sum(4, 6)).toBe(11);
+      expect(sum(4, 6)).toBe(10);
     });
 
     test("handles string numbers", () => {
